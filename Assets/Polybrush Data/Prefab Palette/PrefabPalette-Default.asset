@@ -98,23 +98,6 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: tree_detailed_dark
-  - gameObject: {fileID: -927199367670048503, guid: d2a6e2e2d6773644191598bce451f01a,
-      type: 3}
-    settings:
-      m_Strength: 50
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 360, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 0.5, y: 0.7}
-      m_UniformBool: 1
-      m_XRotationBool: 0
-      m_YRotationBool: 1
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 0
-    name: tree_fat_fall
   - gameObject: {fileID: -927199367670048503, guid: 54cf0b4a76116e74b8bf2f8a5d4bf6e2,
       type: 3}
     settings:
@@ -268,23 +251,6 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: tree_plateau_dark
-  - gameObject: {fileID: -927199367670048503, guid: cff2876a53512b841b70de411f94b02f,
-      type: 3}
-    settings:
-      m_Strength: 50
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 0, z: 0}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 1}
-      m_UniformBool: 0
-      m_XRotationBool: 0
-      m_YRotationBool: 0
-      m_ZRotationBool: 0
-      m_XScaleBool: 0
-      m_YScaleBool: 0
-      m_ZScaleBool: 0
-    name: tree_plateau_fall
   - gameObject: {fileID: -927199367670048503, guid: c5bbd01ac4bd3cd46a81de0382acad82,
       type: 3}
     settings:
@@ -302,7 +268,7 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: tree_thin_dark
-  - gameObject: {fileID: -927199367670048503, guid: 5feed35eb0a6f2649b15a76dbaa8bc28,
+  - gameObject: {fileID: -927199367670048503, guid: 8cecbc39ad3bba34087ef78177320180,
       type: 3}
     settings:
       m_Strength: 50
@@ -318,4 +284,4 @@ MonoBehaviour:
       m_XScaleBool: 0
       m_YScaleBool: 0
       m_ZScaleBool: 0
-    name: tree_thin_fall
+    name: crops_dirtSingle

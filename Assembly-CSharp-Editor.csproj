@@ -58,12 +58,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\External\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
-     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
-     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
-     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
-     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\BeffioDitherEditorUtilities.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\DiffuseDitheredEditor.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\DiffuseShaderBaseEditor.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\PaletteEditor.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\PatternEditor.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\StandardDitheredEditor.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\StandardShaderBaseEditor.cs" />
+     <Compile Include="Assets\Imported\Stylizer\Editor\StylizerEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/GitHub/Need for Alphabets/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
@@ -75,6 +77,12 @@
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/GitHub/Need for Alphabets/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Polybrush">
+ <HintPath>D:/GitHub/Need for Alphabets/Library/ScriptAssemblies/Unity.Polybrush.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Polybrush.Editor">
+ <HintPath>D:/GitHub/Need for Alphabets/Library/ScriptAssemblies/Unity.Polybrush.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/GitHub/Need for Alphabets/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

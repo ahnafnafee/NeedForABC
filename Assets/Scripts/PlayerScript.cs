@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class PlayerScript : MonoBehaviour
 
     private Rigidbody _rb;
 
-    private float gravity = 100;
+    public float gravity = 100;
 
     public GameObject planet;
 
@@ -76,5 +77,19 @@ public class PlayerScript : MonoBehaviour
 
         Quaternion toRotation = Quaternion.FromToRotation(transform.up, _groundNormal) * transform.rotation;
         transform.rotation = toRotation;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.CompareTag("PlanetObj"))
+        {
+            _rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+            _rb.isKinematic = true;
+            Debug.Log("Collision!");
+        }
+        else
+        {
+            _rb.isKinematic = false;
+        }
     }
 }

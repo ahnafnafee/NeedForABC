@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Prefab\CarMainDep\Suspension.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\FakeGravityAttract.cs" />
      <Compile Include="Assets\Scripts\PlayerPlaceholder.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\TutorialCamera.cs" />
