@@ -1,9 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - FakeGravityAttract
+    - FakeGravity
+    - FakeGravityBody
+    - LetterSpawner
+    - PlayerMovement
     - PlayerPlaceholder
-    - PlayerScript
     - VehicleBehaviour.Suspension
     Unity.Polybrush.dll:
     - UnityEngine.Polybrush.PolybrushMesh
@@ -59,25 +61,29 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11902}
+      Script: {instanceID: 12062}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 12080}
     - Class: 114
-      Script: {instanceID: 12600}
+      Script: {instanceID: 12146}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 12232}
     - Class: 114
-      Script: {instanceID: 13062}
+      Script: {instanceID: 12782}
     - Class: 114
-      Script: {instanceID: 13078}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 13244}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13260}
     - Class: 114
-      Script: {instanceID: 13338}
+      Script: {instanceID: 13268}
     - Class: 114
-      Script: {instanceID: 414748}
+      Script: {instanceID: 13352}
+    - Class: 114
+      Script: {instanceID: 60688}
+    - Class: 114
+      Script: {instanceID: 244324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -271,6 +277,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FakeGravityBody
+  - hash:
+      serializedVersion: 2
       Hash: f01f3e19f7ed0bc733210ce364dd2f5d
     assemblyName: Assembly-CSharp.dll
     namespaceName: VehicleBehaviour
@@ -311,6 +323,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Polybrush.dll
     namespaceName: Polybrush
     className: z_AdditionalVertexStreams
+  - hash:
+      serializedVersion: 2
+      Hash: cef3cfc7f7b38553fedf70bec7d25b35
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FakeGravity
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -383,6 +401,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 065a6bb16e88a630544c754c2d4fdf95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FakeGravityAttract
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -583,10 +607,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 065a6bb16e88a630544c754c2d4fdf95
+      Hash: 46512695f25ed556facc2a27bcff25a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FakeGravityAttract
+    className: PlayerMovement
+  - hash:
+      serializedVersion: 2
+      Hash: 5e4bc45abbaae1449080c7da8b1960b8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LetterSpawner
   platform: 5
   scenePathNames:
   - Assets/Scenes/Scene01.unity

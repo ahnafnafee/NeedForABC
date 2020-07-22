@@ -58,14 +58,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Imported\Stylizer\Editor\BeffioDitherEditorUtilities.cs" />
-     <Compile Include="Assets\Imported\Stylizer\Editor\DiffuseDitheredEditor.cs" />
-     <Compile Include="Assets\Imported\Stylizer\Editor\DiffuseShaderBaseEditor.cs" />
-     <Compile Include="Assets\Imported\Stylizer\Editor\PaletteEditor.cs" />
-     <Compile Include="Assets\Imported\Stylizer\Editor\PatternEditor.cs" />
-     <Compile Include="Assets\Imported\Stylizer\Editor\StandardDitheredEditor.cs" />
-     <Compile Include="Assets\Imported\Stylizer\Editor\StandardShaderBaseEditor.cs" />
-     <Compile Include="Assets\Imported\Stylizer\Editor\StylizerEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\Integration\Editor\CommandsPanel.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshCombiner\Scripts\Editor\CommandsPanel.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshCombiner\Scripts\Editor\MeshToolsMenu.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Demo\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Scripts\Editor\CommandsPanel.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Scripts\Editor\ControlPointEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Scripts\Editor\MeshDeformerEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Scripts\Editor\MeshDeformerMenu.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Scripts\Editor\MeshDeformerPostprocessor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Scripts\Editor\ScaffoldEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Spline\Scripts\Editor\SplineBaseEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Spline\Scripts\Editor\SplineControlPointEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Spline\Scripts\Editor\SplineEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshDeformer2\Spline\Scripts\Editor\SplineMenu.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshEditor\Scripts\Editor\DrawNormalsEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\MeshEditor\Scripts\Editor\DrawNormalsMenu.cs" />
+     <Compile Include="Assets\Imported\Battlehub\PivotEditor\Scripts\Editor\MeshToolsMenu.cs" />
+     <Compile Include="Assets\Imported\Battlehub\PivotEditor\Scripts\Editor\PivotPointEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\RTEditor\Scripts\Editor\RuntimeEditorEditor.cs" />
+     <Compile Include="Assets\Imported\Battlehub\RTEditor\Scripts\Editor\RuntimeEditorMenu.cs" />
+     <Compile Include="Assets\Imported\Battlehub\Utils\Editor\ExposeProperties.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/GitHub/Need for Alphabets/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
