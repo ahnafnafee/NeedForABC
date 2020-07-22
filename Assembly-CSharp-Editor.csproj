@@ -58,40 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\BloomModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\BuiltinDebugViewsEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\ChromaticAberrationEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\DitheringModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\FogModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\GrainModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\ScreenSpaceReflectionModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Monitors\HistogramMonitor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Monitors\WaveformMonitor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PostProcessingFactory.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PostProcessingInspector.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PostProcessingModelEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PostProcessingMonitor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Utils\CurveEditor.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Utils\EditorResources.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Utils\FxStyles.cs" />
-     <Compile Include="Assets\Shrinking\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+     <Compile Include="Assets\External\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
+     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
+     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
+     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
+     <Compile Include="Assets\External\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/GitHub/Need for Alphabets/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
@@ -679,17 +651,9 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{CEFA8277-3A63-3399-9E15-215E7A3E0962}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{0FD49EC3-16EA-D159-5683-25F286157E31}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{2CC4D010-4AF6-D7FC-9811-9DD5AAB97040}</Project>
-      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
