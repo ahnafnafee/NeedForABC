@@ -61,29 +61,29 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12062}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 12076}
     - Class: 114
-      Script: {instanceID: 12146}
+      Script: {instanceID: 12094}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 12160}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12246}
     - Class: 114
       Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 12810}
+    - Class: 114
+      Script: {instanceID: 12994}
     - Class: 114
       Script: {instanceID: 13260}
     - Class: 114
-      Script: {instanceID: 13268}
+      Script: {instanceID: 13276}
     - Class: 114
-      Script: {instanceID: 13352}
+      Script: {instanceID: 13284}
     - Class: 114
-      Script: {instanceID: 60688}
-    - Class: 114
-      Script: {instanceID: 244324}
+      Script: {instanceID: 13368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -271,6 +271,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 79497f2016491839ac2fe96e584b2950
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LetterSpawner
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -445,6 +451,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 46512695f25ed556facc2a27bcff25a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovement
+  - hash:
+      serializedVersion: 2
       Hash: 8001a5f7502aab37e42206da015e6914
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -605,18 +617,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 46512695f25ed556facc2a27bcff25a9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerMovement
-  - hash:
-      serializedVersion: 2
-      Hash: 5e4bc45abbaae1449080c7da8b1960b8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LetterSpawner
   platform: 5
   scenePathNames:
   - Assets/Scenes/Scene01.unity

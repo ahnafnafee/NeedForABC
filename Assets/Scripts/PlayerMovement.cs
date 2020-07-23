@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -53,9 +54,16 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Collision!");
         }
-        else
+        
+        if (other.collider.CompareTag("Letter"))
         {
-            _rb.isKinematic = false;
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            other.gameObject.SetActive(false);
+            Debug.Log("YOU GOT THE LETTER " + other.gameObject.GetComponent<TextMeshPro>().text);
         }
+        
+        
+        
+        
     }
 }
