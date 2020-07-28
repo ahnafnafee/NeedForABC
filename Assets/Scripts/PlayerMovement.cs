@@ -1,15 +1,21 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private float _distanceToGround;
-    private Vector3 _groundNormal;
+    private Vector3 _groundNormal, _movement;
 
     private Rigidbody _rb;
 
     public float speed = 4;
     public float turnAngle = 70f;
+    
+    public Transform frontWheel1;
+    public Transform frontWheel2;
+    public Transform backWheel1;
+    public Transform backWheel2;
 
     void Start()
     {
@@ -21,11 +27,19 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //FORWARD MOVEMENT
+        if (Input.GetButton("Vertical")) 
+        {
+            float z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
-        float z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-
-        transform.Translate(0, 0, z);
-
+            //WHEELS
+            frontWheel1.Rotate(120f * Time.deltaTime, 0, 0);
+            frontWheel2.Rotate(120f * Time.deltaTime, 0, 0);
+            backWheel1.Rotate(120f * Time.deltaTime, 0, 0);
+            backWheel2.Rotate(120f * Time.deltaTime, 0, 0);
+            
+            transform.Translate(0, 0, z);
+        }
+        
         //TURNING
 
         if (Input.GetKey(KeyCode.D))
@@ -39,8 +53,9 @@ public class PlayerMovement : MonoBehaviour
         }
         
         RaycastHit hit = new RaycastHit();
-        if (Physics.Raycast(transform.position, -transform.up, out hit, 10))
+        if (Physics.Raycast(transform.position, -transform.up, out hit, Mathf.Infinity))
         {
+            Debug.DrawRay(transform.position, -transform.up * hit.distance, Color.yellow);
             _groundNormal = hit.normal;
         }
 
@@ -54,16 +69,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Collision!");
         }
-        
-        if (other.collider.CompareTag("Letter"))
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Letter"))
         {
-            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            other.gameObject.SetActive(false);
-            Debug.Log("YOU GOT THE LETTER " + other.gameObject.GetComponent<TextMeshPro>().text);
+            GameObject o = other.gameObject;
+            o.GetComponent<Rigidbody>().isKinematic = true;
+            o.SetActive(false);
+            Debug.Log("YOU GOT THE LETTER " + o.name);
         }
-        
-        
-        
-        
     }
 }
