@@ -20,7 +20,6 @@ public class FakeGravityAttract : MonoBehaviour
         _rb.freezeRotation = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
 

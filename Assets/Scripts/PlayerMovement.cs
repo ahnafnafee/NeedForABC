@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _groundNormal, _movement;
 
     private Rigidbody _rb;
-    private float z;
+    private float _z;
 
     public float speed = 4;
     public float turnAngle = 70f;
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Vertical")) 
         {
             //FORWARD MOVEMENT
-            z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+            _z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
             //WHEELS
             frontWheel1.Rotate(120f * Time.deltaTime, 0, 0);
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             backWheel1.Rotate(120f * Time.deltaTime, 0, 0);
             backWheel2.Rotate(120f * Time.deltaTime, 0, 0);
             
-            transform.Translate(0, 0, z);
+            transform.Translate(0, 0, _z);
         }
     }
 
@@ -65,25 +65,5 @@ public class PlayerMovement : MonoBehaviour
 
         Quaternion toRotation = Quaternion.FromToRotation(transform.up, _groundNormal) * transform.rotation;
         transform.rotation = toRotation;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.CompareTag("PlanetObj"))
-        {
-            Debug.Log("Collision!");
-        }
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Letter"))
-        {
-            GameObject o = other.gameObject;
-            o.GetComponent<Rigidbody>().isKinematic = true;
-            o.SetActive(false);
-            Debug.Log("YOU GOT THE LETTER " + o.name);
-        }
     }
 }
