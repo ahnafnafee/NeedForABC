@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _groundNormal, _movement;
 
     private Rigidbody _rb;
+    private float z;
 
     public float speed = 4;
     public float turnAngle = 70f;
@@ -23,13 +24,12 @@ public class PlayerMovement : MonoBehaviour
         _rb.freezeRotation = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        //FORWARD MOVEMENT
         if (Input.GetButton("Vertical")) 
         {
-            float z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+            //FORWARD MOVEMENT
+            z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 
             //WHEELS
             frontWheel1.Rotate(120f * Time.deltaTime, 0, 0);
@@ -39,7 +39,11 @@ public class PlayerMovement : MonoBehaviour
             
             transform.Translate(0, 0, z);
         }
-        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         //TURNING
 
         if (Input.GetKey(KeyCode.D))
