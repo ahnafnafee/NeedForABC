@@ -15,10 +15,16 @@ public class LetterChecker : MonoBehaviour
     public SetTimer timer;
 
     public ScoreCheck scoreCheck;
+
+    public SetMessage msg;
+    public GameObject badExplosion;
+    public GameObject goodExplosion;
+
+    public GameObject msgBox;
     // Start is called before the first frame update
     void Start()
     {
-        
+        msg.InitStart();
     }
 
     // Update is called once per frame
@@ -35,6 +41,20 @@ public class LetterChecker : MonoBehaviour
         }
 
     }
+    
+    IEnumerator ActivateGameObject(GameObject g)
+    {
+ 
+        yield return new WaitForSeconds(2f);
+        g.SetActive(false);
+    }
+    
+    IEnumerator RemoveFX(GameObject g)
+    {
+ 
+        yield return new WaitForSeconds(2f);
+        Destroy(g);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -43,32 +63,37 @@ public class LetterChecker : MonoBehaviour
             GameObject o = other.gameObject;
             
             //DEBUGGING
-            Time.timeScale = 0;
-
-            if (timer.GetSec() < BestTime.LowestTime)
-            {
-                BestTime.LowestTime = timer.GetSec();
-                BestTime.LowStrTime = timerStr.text;
-            }
-            Debug.Log(timer.GetSec());
-            overlay.SetActive(false);
-            endMenu.SetActive(true);
+            // msgBox.SetActive(true);
+            // msg.SetText($"You got the letter {o.name[0]}!");
+            // StartCoroutine(ActivateGameObject(msgBox));
+            
             
 
             if (o.name[0] == _letters[_count])
             {
                 char letter = o.name[0];
                 Debug.Log("YOU GOT THE LETTER " + o.name);
-                o.GetComponent<Rigidbody>().isKinematic = true;
-                Destroy(o);
                 
+                msgBox.SetActive(true);
+                msg.SetText($"You got the \nletter {o.name[0]}! :)");
+                StartCoroutine(ActivateGameObject(msgBox));
+                
+                o.GetComponent<Rigidbody>().isKinematic = true;
+                GameObject explosion1 = Instantiate(goodExplosion, o.transform.position, o.transform.rotation);
+                StartCoroutine(RemoveFX(explosion1));
+                Destroy(o);
+
                 if (letter == 'Z')
                 {
                     Time.timeScale = 0;
 
+                    if (timer.GetSec() < BestTime.LowestTime)
+                    {
+                        BestTime.LowestTime = timer.GetSec();
+                        BestTime.LowStrTime = timerStr.text;
+                    }
                     Debug.Log(timer.GetSec());
-                    
-                    BestTime.LowStrTime = timerStr.text;
+                    overlay.SetActive(false);
                     endMenu.SetActive(true);
                 }
                 
@@ -77,7 +102,14 @@ public class LetterChecker : MonoBehaviour
             }
             else
             {
+                GameObject explosion2 = Instantiate(badExplosion, o.transform.position, o.transform.rotation);
+                StartCoroutine(RemoveFX(explosion2));
                 Destroy(other.gameObject);
+                
+                msgBox.SetActive(true);
+                msg.SetText($"Wrong letter :(\nHint: {_letters[_count]}!");
+                StartCoroutine(ActivateGameObject(msgBox));
+                
                 Debug.Log("That's not alphabetical! Try again");
                 o.name = o.name[0].ToString();
                 Vector3 normal = (Random.onUnitSphere * 10.2f - o.transform.position).normalized;

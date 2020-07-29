@@ -1,0 +1,8 @@
+CREDITS
+-------
+
+1. Planet Assets from https://kenney.nl/assets/nature-kit
+2. Car model from https://kenney.nl/assets/car-kit
+3. Inspiration from https://brackeysgames.itch.io/shrinking-planet
+4. Planet gravity inspired from https://www.youtube.com/watch?v=UeqfHkfPNh4
+5. Polygon ParticleFX particles used
