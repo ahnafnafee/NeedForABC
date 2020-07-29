@@ -15,6 +15,7 @@ public class LetterChecker : MonoBehaviour
     public SetTimer timer;
 
     public ScoreCheck scoreCheck;
+    public bool debugWin = false;
 
     public SetMessage msg;
     public GameObject badExplosion;
@@ -66,7 +67,20 @@ public class LetterChecker : MonoBehaviour
             // msgBox.SetActive(true);
             // msg.SetText($"You got the letter {o.name[0]}!");
             // StartCoroutine(ActivateGameObject(msgBox));
-            
+
+            if (debugWin)
+            {
+                Time.timeScale = 0;
+
+                if (timer.GetSec() < BestTime.LowestTime)
+                {
+                    BestTime.LowestTime = timer.GetSec();
+                    BestTime.LowStrTime = timerStr.text;
+                }
+                Debug.Log(timer.GetSec());
+                overlay.SetActive(false);
+                endMenu.SetActive(true);
+            }
             
 
             if (o.name[0] == _letters[_count])
