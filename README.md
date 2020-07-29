@@ -1,4 +1,4 @@
-# Need for Alphabets
+# Need for ABC
  A low-poly kid's game about alphabets
 
 CREDITS
