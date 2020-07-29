@@ -1,5 +1,7 @@
 # Need for ABC
  A low-poly kid's game about alphabets
+ 
+ itch.io link: https://ahnafnafee.itch.io/need-for-abc
 
 CREDITS
 -------
